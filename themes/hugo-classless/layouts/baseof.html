@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang | default " en" }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+
+  {{- if .Site.Params.themes -}}
+  {{/* Demo mode takes precedence: Use the first theme from the list by default. */}}
+  {{- $stylesheet_url := (index .Site.Params.themes 0).url -}}
+  <link id="theme-style" rel="stylesheet" href="{{ $stylesheet_url }}">
+  {{- else if .Site.Params.theme -}}
+  {{/* Production mode: Use the single specified theme from local resources. */}}
+  {{- $stylesheet_res := resources.Get .Site.Params.theme | toCSS (dict "minify" true) | fingerprint -}}
+  <link id="theme-style" rel="stylesheet" href="{{ $stylesheet_res.RelPermalink }}"
+    integrity="{{ $stylesheet_res.Data.Integrity }}">
+  {{- end -}}
+
+  {{- partial "css-overwrite.html" . -}}
+  {{- partial "syntax.html" . -}}
+
+  <title>
+    {{- if .IsHome -}}{{- .Site.Title -}}{{- else -}}{{- .Title }} | {{ .Site.Title -}}{{- end -}}
+  </title>
+
+  {{- /* Favicons */ -}}
+  <link rel="icon" href="{{ .Site.Params.faviconSVG | relURL }}" type="image/svg+xml">
+  <link rel="shortcut icon" href="{{ .Site.Params.faviconICO | relURL }}">
+  <link rel="apple-touch-icon" href="{{ .Site.Params.appleTouchIcon | relURL }}">
+</head>
+
+<body>
+  <header>
+
+    {{- if .Site.Params.themes -}}
+    {{ partial "theme-selector.html" . }}
+    {{- end -}}
+    <nav>
+      <ul>
+        <li><strong>{{ .Site.Title }}</strong></li>
+      </ul>
+      {{- if .Site.Menus.main -}}
+      <ul>
+        {{- range .Site.Menus.main -}}
+        <li><a href="{{.URL | relURL}}">{{.Name}}</a></li>
+        {{- end -}}
+      </ul>
+      {{- end -}}
+    </nav>
+
+  </header>
+
+  <main>
+    {{- block "main" . }}{{ end -}}
+  </main>
+
+  <footer>
+    <p>&copy; {{ now.Format "2006" }} {{ .Site.Params.author }}.</p>
+  </footer>
+
+</body>
+{{ if or .Params.quickjs .Site.Params.quickjs }}{{ partial "quickjs.html" . }}{{ end }}
+{{ if or .Params.math .Site.Params.math }}{{ partial "math.html" . }}{{ end }}
+{{ partial "mermaid.html" . }}
+{{ template "_internal/google_analytics.html" . }}
+
+</html>

@@ -1,0 +1,49 @@
+baseURL = 'https://rlnorthcutt.github.io/hugo-sample/'
+languageCode = 'en-us'
+title = 'Hugo Sample Site'
+theme = 'hugo-classless'
+
+[params]
+  author = "Hugo Sample"
+  description = "A sample static site for open source projects using Hugo"
+  theme = "css/classless.css"
+  
+  themes = [
+    { name = "Classless.css", url = "/hugo-sample/css/local_classless.css" },
+    { name = "Water.css", url = "https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" },
+    { name = "Simple.css", url = "https://cdn.simplecss.org/simple.min.css" }
+  ]
+  
+  faviconSVG = "/favicon.svg"
+  faviconICO = "/favicon.ico"
+  appleTouchIcon = "/apple-touch-icon.png"
+
+[[menu.main]]
+  name = "Home"
+  pageRef = "/"
+  weight = 10
+
+[[menu.main]]
+  name = "Pages"
+  pageRef = "/pages"
+  weight = 20
+
+[[menu.main]]
+  name = "Posts"
+  pageRef = "/posts"
+  weight = 30
+
+[[menu.main]]
+  name = "News"
+  pageRef = "/news"
+  weight = 40
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    style = "nord"
