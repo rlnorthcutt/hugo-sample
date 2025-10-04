@@ -1,6 +1,6 @@
 # hugo-sample
 
-A sample static site for open source projects using Hugo and the hugo-classless theme.
+A sample static site for open source projects using Hugo and the hugo-classless theme. 
 
 ## Features
 
