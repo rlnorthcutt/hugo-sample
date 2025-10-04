@@ -1,5 +1,5 @@
 ---
-title: "The "Links" section in the version table now provides a link to the public announce of each version on the list."
+title: "The 'Links' section in the version table now provides a link to the public announce of each version on the list."
 date: 2017-06-23
 ---
 
