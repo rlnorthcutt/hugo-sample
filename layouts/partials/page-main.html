@@ -10,6 +10,28 @@
 </article>
 
 {{- if .IsSection -}}
+  {{- if eq .Section "news" -}}
+<section class="news-listing">
+  <h2>{{ .Title | default (.Section | humanize) }}</h2>
+  {{- range .Pages.ByDate.Reverse -}}
+  <article class="news-item">
+    <header>
+      <h3>
+        <a href="{{ .RelPermalink }}">
+          {{- if .Date -}}
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time> –
+          {{- end -}}
+          {{ .Title }}
+        </a>
+      </h3>
+    </header>
+    <div class="content">
+      {{ .Content }}
+    </div>
+  </article>
+  {{- end -}}
+</section>
+  {{- else -}}
 <section>
   <h2>{{ .Title | default (.Section | humanize) }}</h2>
   <ul>
@@ -25,6 +47,7 @@
     {{- end -}}
   </ul>
 </section>
+  {{- end -}}
 {{- else if .IsHome -}}
 <section>
   <h2>Latest Updates</h2>

@@ -16,6 +16,8 @@
   <link id="theme-style" rel="stylesheet" href="{{ $stylesheet.RelPermalink }}" integrity="{{ $stylesheet.Data.Integrity }}">
   {{- end -}}
 
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+
   {{- partial "css-overwrite.html" . -}}
   {{- partial "syntax.html" . -}}
 
