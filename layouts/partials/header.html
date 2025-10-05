@@ -1,0 +1,17 @@
+<header>
+  {{- if .Site.Params.themes -}}
+  {{ partial "theme-selector.html" . }}
+  {{- end -}}
+  <nav>
+    <ul>
+      <li><strong><a href="{{ "/" | relLangURL }}">{{ .Site.Title }}</a></strong></li>
+    </ul>
+    {{- if .Site.Menus.main -}}
+    <ul>
+      {{- range .Site.Menus.main -}}
+      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+      {{- end -}}
+    </ul>
+    {{- end -}}
+  </nav>
+</header>

@@ -1,0 +1,44 @@
+<article>
+  {{- if and (not .IsHome) .Title -}}
+  <h1>{{ .Title }}</h1>
+  {{- end -}}
+  {{- if .Content -}}
+  <div class="content">
+    {{ .Content }}
+  </div>
+  {{- end -}}
+</article>
+
+{{- if .IsSection -}}
+<section>
+  <h2>{{ .Title | default (.Section | humanize) }}</h2>
+  <ul>
+    {{- range .Pages.ByDate.Reverse -}}
+    <li>
+      <a href="{{ .RelPermalink }}">
+        {{- if .Date -}}
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time> –
+        {{- end -}}
+        {{ .Title }}
+      </a>
+    </li>
+    {{- end -}}
+  </ul>
+</section>
+{{- else if .IsHome -}}
+<section>
+  <h2>Latest Updates</h2>
+  <ul>
+    {{- range first 10 (.Site.RegularPages.ByDate.Reverse) -}}
+    <li>
+      <a href="{{ .RelPermalink }}">
+        {{- if .Date -}}
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time> –
+        {{- end -}}
+        {{ .Title }}
+      </a>
+    </li>
+    {{- end -}}
+  </ul>
+</section>
+{{- end -}}
