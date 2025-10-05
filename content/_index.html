@@ -1,21 +1,154 @@
 ---
-title: "Welcome to Hugo Sample"
+title: "HAProxy"
 date: 2024-01-01
 ---
 
-<section class="hero">
-  <h1>Hugo Sample Site</h1>
-  <p>This is a sample static site for open source projects built with Hugo and the hugo-classless theme.</p>
-</section>
+<main>
+  <section id="hero">
+    <header>
+      <h1>HAProxy: The World's Fastest and Most Widely Used Software Load Balancer</h1>
+      <p>The proven open-source solution for high-performance load balancing, proxying, and application delivery for any environment.</p>
+    </header>
+    <div class="cta-group">
+      <a href="/get-started" class="primary-cta">Get Started</a>
+      <a href="/download-latest" class="secondary-cta">Download Latest</a>
+    </div>
+  </section>
 
-<section>
-  <h2>Features</h2>
-  <ul>
-    <li>Clean, minimal design with classless CSS</li>
-    <li>Three content sections: Pages, Posts, and News</li>
-    <li>Automated deployment to GitHub Pages</li>
-    <li>Fast and responsive</li>
-  </ul>
-</section>
+  <section id="social-proof">
+    <h2>Trusted by the World's Busiest Websites</h2>
+    <div class="logo-grid">
+      <figure><img src="/img/logo-placeholder-a.svg" alt="Company A Logo"></figure>
+      <figure><img src="/img/logo-placeholder-b.svg" alt="Company B Logo"></figure>
+      <figure><img src="/img/logo-placeholder-c.svg" alt="Company C Logo"></figure>
+      <figure><img src="/img/logo-placeholder-d.svg" alt="Company D Logo"></figure>
+      <figure><img src="/img/logo-placeholder-e.svg" alt="Company E Logo"></figure>
+      <figure><img src="/img/logo-placeholder-f.svg" alt="Company F Logo"></figure>
+    </div>
+  </section>
 
-<p>Explore the site using the navigation menu above!</p>
+  <section id="value-props">
+    <h2>The Standard for Performance and Reliability</h2>
+    <div class="value-grid">
+      <article class="value-block">
+        <span class="icon">🚀</span> <h3>Unmatched Performance</h3>
+        <p>Achieve millions of requests per second and 100Gbps of throughput.</p>
+      </article>
+      <article class="value-block">
+        <span class="icon">🛡️</span> <h3>Proven Reliability</h3>
+        <p>Hardened by two decades of use in the most demanding environments.</p>
+      </article>
+      <article class="value-block">
+        <span class="icon">🔒</span> <h3>Hardened Security</h3>
+        <p>A secure-by-default architecture that protects your most important applications.</p>
+      </article>
+      <article class="value-block">
+        <span class="icon">🧩</span> <h3>Limitless Extensibility</h3>
+        <p>A flexible and powerful configuration language and Lua support for any use case.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="onboarding-start">
+    <h2>Get Started in Minutes</h2>
+    <div class="code-block-container">
+      <pre><code>global
+    log /dev/log    local0
+    maxconn 2000
+
+defaults
+    log global
+    mode http
+    timeout connect 5000ms
+    timeout client 50000ms
+    timeout server 50000ms
+
+frontend http_front
+    bind *:80
+    default_backend http_back
+
+backend http_back
+    balance roundrobin
+    server web01 192.168.1.1:80 check
+    server web02 192.168.1.2:80 check</code></pre>
+    </div>
+    <nav class="use-case-links">
+      <a href="/docs/kubernetes-ingress">Deploy as a Kubernetes Ingress Controller</a>
+      <a href="/docs/api-gateway-guide">Build a High-Performance API Gateway</a>
+      <a href="/docs/tcp-http-scaling">Secure and Scale TCP/HTTP Applications</a>
+    </nav>
+  </section>
+
+  <section id="releases-news">
+    <h2>Latest Releases & Project News</h2>
+    <div class="two-col-layout">
+      <div id="releases">
+        <h3>Current Stable Versions</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Version</th>
+              <th>Status</th>
+              <th>Links</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>**2.8**</td>
+              <td>Stable/LTS</td>
+              <td><a href="/download#2.8">Download</a> | <a href="/changelog#2.8">Changelog</a></td>
+            </tr>
+            <tr>
+              <td>**3.0**</td>
+              <td>Latest Stable</td>
+              <td><a href="/download#3.0">Download</a> | <a href="/changelog#3.0">Changelog</a></td>
+            </tr>
+            <tr>
+              <td>**3.1-dev**</td>
+              <td>Development</td>
+              <td><a href="/download#3.1">Download</a> | <a href="/changelog#3.1">Changelog</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="news-feed">
+        <h3>Project News & Advisories</h3>
+        <article>
+            <h3>Security Advisory: Buffer Overflow Fix in HTTP Parser</h3>
+            <p><time datetime="2025-10-01">Oct 1, 2025</time></p>
+            <a href="/blog/advisory-buffer-overflow" class="read-more">Read More →</a>
+        </article>
+        <article>
+            <h3>New Feature Highlight: Dynamic Server Configuration</h3>
+            <p><time datetime="2025-09-25">Sep 25, 2025</time></p>
+            <a href="/blog/dynamic-config-feature" class="read-more">Read More →</a>
+        </article>
+        <article>
+            <h3>HAProxy 3.0 Released with HTTP/3 Support</h3>
+            <p><time datetime="2025-09-15">Sep 15, 2025</time></p>
+            <a href="/blog/haproxy-3.0-release" class="read-more">Read More →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="ecosystem">
+    <h2>Join the HAProxy Ecosystem</h2>
+    <div class="ecosystem-blocks">
+      <div class="community-block">
+        <h3>Join Our Community</h3>
+        <p>Collaborate with thousands of users and contributors. Get help, ask questions, and contribute to the future of HAProxy.</p>
+        <div class="cta-group">
+          <a href="/community/forum" class="primary-cta">Forum/Mailing List</a>
+          <a href="https://github.com/haproxy/haproxy" class="secondary-cta">View on GitHub</a>
+        </div>
+      </div>
+      <div class="enterprise-block">
+        <h3>Enterprise Solutions & Support</h3>
+        <p>Get 24/7 expert support, enterprise-grade features, and professional services to secure and scale your most important applications with HAProxy Technologies.</p>
+        <a href="https://www.haproxy.com" class="primary-cta">Explore Enterprise Offerings</a>
+      </div>
+    </div>
+  </section>
+  
+</main>
