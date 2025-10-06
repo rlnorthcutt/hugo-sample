@@ -8,7 +8,7 @@ theme = 'hugo-classless'
   description = "A sample static site for open source projects using Hugo"
   theme = "css/classless.css"
   
-themes = {
+themes = [
   { name = "HTML only", url = "" },
   { name = "Skeleton.css", url = "https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"},
   { name = "Cosmo.css", url = "https://cdn.jsdelivr.net/gh/cspablocortez/cosmocss@latest/cosmo.min.css" },
