@@ -8,25 +8,17 @@ theme = 'hugo-classless'
   description = "A sample static site for open source projects using Hugo"
   theme = "css/classless.css"
   
-  themes:
-    - name: "Classless.css"
-      url: "/css/local_classless.css"
-    - name: "Cosmo.css"
-      url: "https://cdn.jsdelivr.net/gh/cspablocortez/cosmocss@latest/cosmo.min.css"
-    - name: "Pico"
-      url: "https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
-    - name: "Pico-Fluid"
-      url: "https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.fluid.classless.min.css"
-    - name: "Water.css"
-      url: "https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
-    - name: "Simple.css"
-      url: "https://cdn.simplecss.org/simple.min.css"
-    - name: "New.css"
-      url: "https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    - name: "PerfectMFWS"
-      url: "https://perfectmotherfuckingwebsite.com/fuckingstyle.css"
-    - name: "HTML only"
-      url: ""
+themes = [
+  { name = "Classless.css", url = "/css/local_classless.css" },
+  { name = "Cosmo.css", url = "https://cdn.jsdelivr.net/gh/cspablocortez/cosmocss@latest/cosmo.min.css" },
+  { name = "Pico", url = "https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" },
+  { name = "Pico-Fluid", url = "https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.fluid.classless.min.css" },
+  { name = "Water.css", url = "https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" },
+  { name = "Simple.css", url = "https://cdn.simplecss.org/simple.min.css" },
+  { name = "New.css", url = "https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css" },
+  { name = "PerfectMFWS", url = "https://perfectmotherfuckingwebsite.com/fuckingstyle.css" },
+  { name = "HTML only", url = "" }
+]
   
   faviconSVG = "/favicon.svg"
   faviconICO = "/favicon.ico"
