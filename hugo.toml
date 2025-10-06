@@ -10,7 +10,7 @@ theme = 'hugo-classless'
   
 themes = {
   { name = "HTML only", url = "" },
-  { name + "Skeleton.css", url = "https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"},
+  { name = "Skeleton.css", url = "https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"},
   { name = "Cosmo.css", url = "https://cdn.jsdelivr.net/gh/cspablocortez/cosmocss@latest/cosmo.min.css" },
   { name = "Pico", url = "https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" },
   { name = "Pico-Fluid", url = "https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.fluid.classless.min.css" },
