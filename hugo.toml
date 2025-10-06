@@ -1,279 +1,55 @@
-:root {
-  /* Colors */
-  --primary-color: #00bbe0; /* Primary brand color (HAProxy Blue, previously "Red" in a comment) */
-  --text-color: #333; /* A general dark text color, implied but good practice */
-  --background-dark: #272822; /* Monokai-like dark background for code */
-  --white-color: white;
-  --light-border-color: #eee;
-  --lighter-border-color: #ddd;
+baseURL = 'https://rlnorthcutt.github.io/hugo-sample/'
+languageCode = 'en-us'
+title = 'Hugo Sample Site'
+theme = 'hugo-classless'
 
-  /* Spacing */
-  --space-xxs: 0.25em; /* For small margins like h1-p separation */
-  --space-xs: 0.5em; /* For icon-text separation */
-  --space-sm: 0.75rem; /* For table padding */
-  --space-md: 1rem; /* For small mobile padding/gaps */
-  --space-lg: 1.5rem; /* For block padding/CTA gap/Code block padding */
-  --space-xl: 2rem; /* For large margins/gaps/section titles */
-  --space-xxl: 2.5rem; /* For large block padding */
-  --space-section-vert: 6rem; /* Vertical padding for full sections */
+[params]
+  author = "Hugo Sample"
+  description = "A sample static site for open source projects using Hugo"
+  theme = "css/classless.css"
+  
+themes = [
+  { name = "Classless.css", url = "/css/local_classless.css" },
+  { name = "Cosmo.css", url = "https://cdn.jsdelivr.net/gh/cspablocortez/cosmocss@latest/cosmo.min.css" },
+  { name = "Pico", url = "https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css" },
+  { name = "Pico-Fluid", url = "https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.fluid.classless.min.css" },
+  { name = "Water.css", url = "https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" },
+  { name = "Simple.css", url = "https://cdn.simplecss.org/simple.min.css" },
+  { name = "New.css", url = "https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css" },
+  { name = "PerfectMFWS", url = "https://perfectmotherfuckingwebsite.com/fuckingstyle.css" },
+  { name = "HTML only", url = "" }
+]
+  
+  faviconSVG = "/favicon.svg"
+  faviconICO = "/favicon.ico"
+  appleTouchIcon = "/apple-touch-icon.png"
 
-  /* Typography */
-  --font-size-base: 1em; /* Base font size, for reference */
-  --font-size-h1: 3em;
-  --font-size-h3: 1.2em;
-  --font-size-p: 1.25em;
-  --font-size-icon: 2.5em;
+[[menu.main]]
+  name = "Home"
+  pageRef = "/"
+  weight = 10
 
-  /* Other Dimensions */
-  --border-radius-sm: 4px;
-  --border-radius-lg: 8px;
-  --border-thickness: 2px;
-}
+[[menu.main]]
+  name = "Pages"
+  pageRef = "/pages"
+  weight = 20
 
-/* 1. Whole page */
-body {
-  font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
+[[menu.main]]
+  name = "Posts"
+  pageRef = "/posts"
+  weight = 30
 
-main {
-  padding: 0 2rem;
-  margin: 0 auto;
-  max-width: 90rem;
-}
+[[menu.main]]
+  name = "News"
+  pageRef = "/news"
+  weight = 40
 
-section {
-  margin-bottom: 2rem
-}
-
-/* 2. Hero Section */
-#hero {
-  text-align: center;
-  padding: var(--space-section-vert) 0;
-  margin-top: 0;
-  border-top: none;
-}
-
-#hero h1 {
-  font-size: var(--font-size-h1);
-  margin-bottom: var(--space-xxs);
-}
-
-#hero p {
-  font-size: var(--font-size-p);
-  margin-bottom: var(--space-xl);
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cta-group {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-lg);
-}
-
-.cta-group a {
-  padding: 0.8rem var(--space-xl); /* Kept 0.8rem as it's not a common space value */
-  border-radius: var(--border-radius-sm);
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.2s;
-}
-
-.cta-group .primary-cta {
-  background-color: var(--primary-color);
-  color: var(--white-color);
-  border: var(--border-thickness) solid var(--primary-color);
-}
-
-.cta-group .secondary-cta {
-  background-color: transparent;
-  color: var(--primary-color);
-  border: var(--border-thickness) solid var(--primary-color);
-}
-
----
-
-/* 3. Social Proof Section */
-#social-proof h2 {
-  margin-bottom: var(--space-xl);
-}
-
-.logo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: var(--space-xl);
-  align-items: center;
-  justify-items: center;
-  opacity: 0.7;
-}
-
-.logo-grid figure {
-  margin: 0;
-  max-width: 100%;
-  height: auto;
-  width: 100%;
-  height: 60px; /* Kept 60px as it's a specific dimension */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
----
-
-/* 4. Core Value Propositions */
-.value-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--space-xl);
-  text-align: center;
-}
-
-.value-block {
-  padding: var(--space-lg);
-  border: 1px solid var(--light-border-color);
-  border-radius: var(--border-radius-lg);
-}
-
-.icon {
-  font-size: var(--font-size-icon);
-  color: var(--primary-color);
-  margin-bottom: var(--space-xs);
-  display: block;
-}
-
-.value-block h3 {
-  font-size: var(--font-size-h3);
-  margin-top: 0;
-}
-
----
-
-/* 5. Onboarding Section */
-#onboarding-start .code-block-container {
-  max-width: 800px; /* Kept 800px as it's a specific dimension */
-  margin: var(--space-xl) auto;
-  background-color: var(--background-dark);
-  color: var(--white-color);
-  padding: var(--space-lg);
-  border-radius: var(--border-radius-lg);
-  overflow-x: auto;
-}
-
-#onboarding-start code {
-  white-space: pre;
-  font-size: 0.9em; /* Kept 0.9em as it's a specific size adjustment */
-}
-
-.use-case-links {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-lg);
-  margin-top: var(--space-xl);
-}
-
-.use-case-links a {
-  text-decoration: none;
-  color: var(--primary-color);
-  font-weight: 500;
-}
-
----
-
-/* 6. Releases & News */
-.two-col-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem; /* Kept 3rem, as it's a unique gap size */
-}
-
-/* Releases Table */
-#releases table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-#releases th, #releases td {
-  padding: var(--space-sm);
-  text-align: left;
-  border-bottom: 1px solid var(--light-border-color);
-}
-
-/* News Feed */
-.news-feed article {
-  margin-bottom: var(--space-md);
-  padding-bottom: var(--space-md);
-  border-bottom: 1px dashed var(--lighter-border-color);
-}
-
-.news-feed h3 {
-  text-align: left;
-  font-size: 1.1em; /* Kept 1.1em as it's a specific size adjustment */
-  margin: 0 0 var(--space-xxs) 0;
-}
-
-.news-feed a.read-more {
-  display: inline-block;
-  font-size: 0.9em; /* Kept 0.9em as it's a specific size adjustment */
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
----
-
-/* 7. Ecosystem Section */
-#ecosystem h2 {
-  margin-bottom: var(--space-xl);
-}
-
-.ecosystem-blocks {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-xl);
-  text-align: center;
-}
-
-.community-block, .enterprise-block {
-  padding: var(--space-xxl);
-  border-radius: var(--border-radius-lg);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.community-block {
-  /* No specific border/background given, kept empty */
-}
-
-.enterprise-block {
-  border: var(--border-thickness) solid var(--primary-color);
-}
-
-.ecosystem-blocks h3 {
-  margin-top: 0;
-  font-size: 1.4em; /* Kept 1.4em as it's a specific size adjustment */
-}
-
-.ecosystem-blocks p {
-  margin-bottom: var(--space-lg);
-}
-
----
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-  #hero {
-    /* Using a specific vertical space for mobile hero */
-    padding: 4rem var(--space-md);
-  }
-  #hero h1 {
-    font-size: 2em;
-  }
-  .cta-group {
-    flex-direction: column;
-    gap: var(--space-md);
-  }
-  .two-col-layout, .ecosystem-blocks {
-    grid-template-columns: 1fr;
-  }
-}
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    style = "nord"
