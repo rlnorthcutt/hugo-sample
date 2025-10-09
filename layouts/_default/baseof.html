@@ -37,6 +37,6 @@
   {{ if or .Params.math .Site.Params.math }}{{ partial "math.html" . }}{{ end }}
   {{ partial "mermaid.html" . }}
   {{ template "_internal/google_analytics.html" . }}
-  <script type="module" src="dark-mode-toggle.min.js" defer=""></script>
+  <script type="module" src="{{ "js/dark-mode-toggle.js | relURL }}" defer=""></script>
 </body>
 </html>
