@@ -6,16 +6,8 @@
   <meta name="color-scheme" content="light dark">
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
-  {{- if .Site.Params.themes -}}
-  {{/* Demo mode takes precedence: Use the first theme from the list by default. */}}
-  {{- $stylesheetURL := (index .Site.Params.themes 0).url -}}
-  <link id="theme-style" rel="stylesheet" href="{{ $stylesheetURL }}">
-  {{- else if .Site.Params.theme -}}
-  {{/* Production mode: Use the single specified theme from local resources. */}}
-  {{- $stylesheet := resources.Get .Site.Params.theme | toCSS (dict "minify" true) | fingerprint -}}
-  <link id="theme-style" rel="stylesheet" href="{{ $stylesheet.RelPermalink }}" integrity="{{ $stylesheet.Data.Integrity }}">
-  {{- end -}}
-
+    <link rel="stylesheet" href="{{ "css/ivy.full.min.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/lattice.full.min.css" | relURL }}">
   <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 
   {{- partial "css-overwrite.html" . -}}
