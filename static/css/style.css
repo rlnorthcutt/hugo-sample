@@ -1,7 +1,7 @@
 :root {
   /* palette */
   --color-bg:#ffffff; --color-text:#1b1f23; --color-muted:#667085;
-  --color-link:#00bbe0; --color-border:#e5e7eb; --color-surface:#fafafa;
+  --color-link:#0066ee; --color-border:#e5e7eb; --color-surface:#fafafa;
 
   /* typography & rhythm */
   --font-sans:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,
@@ -15,7 +15,7 @@
 
   /* OLD */
   /* Colors */
-  --primary-color: #00bbe0; /* Primary brand color (HAProxy Blue, previously "Red" in a comment) */
+  --primary-color: #0066ee; /* Primary brand color (HAProxy Blue, previously "Red" in a comment) */
   --text-color: #333; /* A general dark text color, implied but good practice */
   --background-dark: #272822; /* Monokai-like dark background for code */
   --white-color: white;
