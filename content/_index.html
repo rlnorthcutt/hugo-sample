@@ -15,41 +15,47 @@ date: 2024-01-01
     </div>
   </section>
 
-  <section id="social-proof">
-    <h2>Trusted by the World's Busiest Websites</h2>
-    <div class="logo-grid">
-      <figure><img src="/img/logo-placeholder-a.svg" alt="Company A Logo"></figure>
-      <figure><img src="/img/logo-placeholder-b.svg" alt="Company B Logo"></figure>
-      <figure><img src="/img/logo-placeholder-c.svg" alt="Company C Logo"></figure>
-      <figure><img src="/img/logo-placeholder-d.svg" alt="Company D Logo"></figure>
-      <figure><img src="/img/logo-placeholder-e.svg" alt="Company E Logo"></figure>
-      <figure><img src="/img/logo-placeholder-f.svg" alt="Company F Logo"></figure>
-    </div>
-  </section>
+ <section>
+  <h2>Trusted by the World's Busiest Websites</h2>
+  <!-- 3 cols on small (≥576px), 6 cols on medium (≥768px) -->
+  <div class="grid sm-col-3 md-col-6 gap-3">
+    <figure><img src="/img/logo-placeholder-a.svg" alt="Company A Logo"></figure>
+    <figure><img src="/img/logo-placeholder-b.svg" alt="Company B Logo"></figure>
+    <figure><img src="/img/logo-placeholder-c.svg" alt="Company C Logo"></figure>
+    <figure><img src="/img/logo-placeholder-d.svg" alt="Company D Logo"></figure>
+    <figure><img src="/img/logo-placeholder-e.svg" alt="Company E Logo"></figure>
+    <figure><img src="/img/logo-placeholder-f.svg" alt="Company F Logo"></figure>
+  </div>
+</section>
 
-  <section id="value-props">
-    <h2>The Standard for Performance and Reliability</h2>
-    <div class="value-grid">
-      <article class="value-block">
-        <span class="icon">🚀</span> <h3>Unmatched Performance</h3>
-        <p>Achieve millions of requests per second and 100Gbps of throughput.</p>
-      </article>
-      <article class="value-block">
-        <span class="icon">🛡️</span> <h3>Proven Reliability</h3>
-        <p>Hardened by two decades of use in the most demanding environments.</p>
-      </article>
-      <article class="value-block">
-        <span class="icon">🔒</span> <h3>Hardened Security</h3>
-        <p>A secure-by-default architecture that protects your most important applications.</p>
-      </article>
-      <article class="value-block">
-        <span class="icon">🧩</span> <h3>Limitless Extensibility</h3>
-        <p>A flexible and powerful configuration language and Lua support for any use case.</p>
-      </article>
-    </div>
-  </section>
+<section>
+  <h2>The Standard for Performance and Reliability</h2>
+  <!-- 2 cols on medium (≥768px), 4 cols on large (≥1024px) -->
+  <div class="grid md-col-2 lg-col-4 gap-3">
+    <article>
+      <span class="icon">🚀</span>
+      <h3>Unmatched Performance</h3>
+      <p>Achieve millions of requests per second and 100Gbps of throughput.</p>
+    </article>
+    <article>
+      <span class="icon">🛡️</span>
+      <h3>Proven Reliability</h3>
+      <p>Hardened by two decades of use in the most demanding environments.</p>
+    </article>
+    <article>
+      <span class="icon">🔒</span>
+      <h3>Hardened Security</h3>
+      <p>A secure-by-default architecture that protects your most important applications.</p>
+    </article>
+    <article>
+      <span class="icon">🧩</span>
+      <h3>Limitless Extensibility</h3>
+      <p>A flexible and powerful configuration language and Lua support for any use case.</p>
+    </article>
+  </div>
+</section>
 
-  <section id="onboarding-start">
+  <section>
     <h2>Get Started in Minutes</h2>
     <div class="code-block-container">
       <pre><code>global
@@ -72,14 +78,14 @@ backend http_back
     server web01 192.168.1.1:80 check
     server web02 192.168.1.2:80 check</code></pre>
     </div>
-    <nav class="use-case-links">
+    <nav class="grid sm-col-3">
       <a href="/docs/kubernetes-ingress">Deploy as a Kubernetes Ingress Controller</a>
       <a href="/docs/api-gateway-guide">Build a High-Performance API Gateway</a>
       <a href="/docs/tcp-http-scaling">Secure and Scale TCP/HTTP Applications</a>
     </nav>
   </section>
 
-  <section id="releases-news">
+  <section>
     <h2>Latest Releases & Project News</h2>
     <div class="two-col-layout">
       <div id="releases">
