@@ -1,7 +1,4 @@
 <header>
-  {{- if .Site.Params.themes -}}
-  {{ partial "theme-selector.html" . }}
-  {{- end -}}
   <nav>
     <ul>
       <li><strong><a href="{{ "/" | relLangURL }}">{{ .Site.Title }}</a></strong></li>
