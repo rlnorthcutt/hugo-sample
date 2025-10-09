@@ -1,4 +1,19 @@
 :root {
+  /* palette */
+  --color-bg:#ffffff; --color-text:#1b1f23; --color-muted:#667085;
+  --color-link:#00bbe0; --color-border:#e5e7eb; --color-surface:#fafafa;
+
+  /* typography & rhythm */
+  --font-sans:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,
+               Noto Sans,Helvetica Neue,Arial,"Apple Color Emoji",
+               "Segoe UI Emoji","Segoe UI Symbol";
+  --font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,
+               "Liberation Mono","Courier New",monospace;
+  --base-size:16px; --font-size: 100%; --lh:1.6; --measure:64rem; /* ideal reading width */
+  --radius:.375rem; --m:1rem; /* base spacing for Ivy (independent of Lattice) */
+
+
+  /* OLD */
   /* Colors */
   --primary-color: #00bbe0; /* Primary brand color (HAProxy Blue, previously "Red" in a comment) */
   --text-color: #333; /* A general dark text color, implied but good practice */
