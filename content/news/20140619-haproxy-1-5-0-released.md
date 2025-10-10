@@ -2,14 +2,23 @@
 title: "HAProxy 1.5.0 released!"
 date: 2014-06-19
 ---
-
 After 4 years of hard work, **HAProxy 1.5.0 is finally released!**
 
 For people who don't follow the development versions, 1.5 expands 1.4 with many new features and performance improvements, including **native SSL** support on both sides with SNI/NPN/ALPN and OCSP stapling, **IPv6** and UNIX sockets are supported everywhere, **full HTTP keep-alive** for better support of NTLM and improved efficiency in static farms, **HTTP/1.1 compression** (deflate, gzip) to save bandwidth, **PROXY protocol** versions 1 and 2 on both sides, **data sampling** on everything in request or response, including payload, **ACLs** can use any matching method with any input sample **maps** and dynamic ACLs **updatable** from the CLI **stick-tables** support counters to track activity on any input sample **custom format** for logs, unique-id, header rewriting, and redirects, **improved health** checks (SSL, scripted TCP, check agent, ...), **much more scalable** configuration supports hundreds of thousands of backends and certificates without sweating.
 
-Since dev26, a few bugs were fixed, and some low-importance things were integrated. Basic OCSP stapling support from Dirkjan and Emeric was finally merged. Sasha's header replace actions were merged as well. I've added a few more info in the stats page (avg response times) and CSV output (health check status), added support for PROXY v2 on the accept side, and added the "capture" action on tcp-request in order to log contents such as SNI or payload. Rémi's dh-param was finally integrated.
+Since dev26, a few bugs were fixed, and some low-importance things were integrated.
 
-People love numbers, so here are a few. From 1.4.0 to 1.5.0, we had :
+Basic OCSP stapling support from Dirkjan and Emeric was finally merged.
+
+Sasha's header replace actions were merged as well.
+
+I've added a few more info in the stats page (avg response times) and CSV output (health check status), added support for PROXY v2 on the accept side, and added the "capture" action on tcp-request in order to log contents such as SNI or payload.
+
+Rémi's dh-param was finally integrated.
+
+People love numbers, so here are a few.
+
+From 1.4.0 to 1.5.0, we had :
 
 *   **1574** calendar days (4 yr 3 mon)
 *   **26** development versions (one every 2 months on average)
@@ -30,7 +39,9 @@ Additionally, we are very thankful to a few organisations who have **sponsored**
 *   [SmugMug](http://www.smugmug.com/)
 *   [ImageShack](https://imageshack.com/)
 
-Don't forget to offer a beer to your **distro packagers** who make your life easier. It's hard to list them all, but if you don't build from sources, you're likely running a package made and maintained by one of these people :
+Don't forget to offer a beer to your **distro packagers** who make your life easier.
+
+It's hard to list them all, but if you don't build from sources, you're likely running a package made and maintained by one of these people :
 
 *   debian: Vincent Bernat, Apollon Oikonomopoulos, Prach Pongpanich
 *   Fedora: Ryan O'hara

@@ -2,5 +2,32 @@
 title: "1.5-dev20 : keep-alive, finally!"
 date: 2013-12-16
 ---
+This version took 6 months to be released given the difficulty of some changes, and it collected a number of new features.
 
-This version took 6 months to be released given the difficulty of some changes, and it collected a number of new features. The most awaited of them is **server-side keep-alive**. The first commit for this feature was initially attempted almost 4 years ago. There are still some limitations, idle server connections are not accounted for maxconn and not reported in the stats for example. And option http-keep-alive still needs to be specified to benefit from the feature. The memory usage has significantly dropped, 640 bytes saved per idle connection on 64-bit systems. All sample fetch expressions (including ACLs) now support a list of converters applied to the sample. The new **map** feature allows input samples to be converted to other ones. The most common usage of this is geolocation, but it may also be used for massive redirect tables. Maps are updatable live from the CLI. Redirects support the log-format syntax and can embed some elements collected from the request. Hash algorithms can now be selected per backend. Health checks have been improved with the **agent-check** and **tcp-check** to build send/expect rules. Please refer to the [changelog](/download/1.5/src/CHANGELOG) for more information. Source code is available [here](/download/1.5/src/).
+The most awaited of them is **server-side keep-alive**.
+
+The first commit for this feature was initially attempted almost 4 years ago.
+
+There are still some limitations, idle server connections are not accounted for maxconn and not reported in the stats for example.
+
+And option http-keep-alive still needs to be specified to benefit from the feature.
+
+The memory usage has significantly dropped, 640 bytes saved per idle connection on 64-bit systems.
+
+All sample fetch expressions (including ACLs) now support a list of converters applied to the sample.
+
+The new **map** feature allows input samples to be converted to other ones.
+
+The most common usage of this is geolocation, but it may also be used for massive redirect tables.
+
+Maps are updatable live from the CLI.
+
+Redirects support the log-format syntax and can embed some elements collected from the request.
+
+Hash algorithms can now be selected per backend.
+
+Health checks have been improved with the **agent-check** and **tcp-check** to build send/expect rules.
+
+Please refer to the [changelog](/download/1.5/src/CHANGELOG) for more information.
+
+Source code is available [here](/download/1.5/src/).
