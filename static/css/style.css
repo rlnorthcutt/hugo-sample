@@ -1,24 +1,17 @@
 :root {
-  /* palette */
-  --color-bg:#ffffff; --color-text:#1b1f23; --color-muted:#667085;
-  --color-link:#0066ee; --color-border:#e5e7eb; --color-surface:#fafafa;
+  color-scheme: light;
+  /* palette overrides consumed by Ivy */
+  --color-bg: #ffffff;
+  --color-text: #1b1f23;
+  --color-muted: #667085;
+  --color-link: #0066ee;
+  --color-border: #e5e7eb;
+  --color-surface: #fafafa;
 
-  /* typography & rhythm */
-  --font-sans:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,
-               Noto Sans,Helvetica Neue,Arial,"Apple Color Emoji",
-               "Segoe UI Emoji","Segoe UI Symbol";
-  --font-mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,
-               "Liberation Mono","Courier New",monospace;
-  --base-size:16px; --font-size: 100%; --lh:1.6; --measure:64rem; /* ideal reading width */
-  --radius:.375rem; --m:1rem; /* base spacing for Ivy (independent of Lattice) */
-
-
-  /* OLD */
-  /* Colors */
-  --primary-color: #0066ee; /* Primary brand color (HAProxy Blue, previously "Red" in a comment) */
-  --text-color: #333; /* A general dark text color, implied but good practice */
-  --background-dark: #272822; /* Monokai-like dark background for code */
-  --white-color: white;
+  /* component tokens derived from Ivy palette */
+  --primary-color: var(--color-link);
+  --white-color: #ffffff;
+  --background-dark: #272822;
   --light-border-color: #eee;
   --lighter-border-color: #ddd;
 
@@ -45,9 +38,34 @@
   --border-thickness: 2px;
 }
 
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --color-bg: #0b1120;
+  --color-text: #e2e8f0;
+  --color-muted: #94a3b8;
+  --color-link: #60a5fa;
+  --color-border: #1f2937;
+  --color-surface: #111827;
+
+  --primary-color: var(--color-link);
+  --white-color: #f8fafc;
+  --background-dark: #111827;
+  --light-border-color: #1f2937;
+  --lighter-border-color: #374151;
+}
+
 /* 1. Whole page */
 body {
   font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+a {
+  color: var(--color-link);
+}
+
+a:hover,
+a:focus {
+  color: color-mix(in srgb, var(--color-link) 80%, white);
 }
 
 main {
