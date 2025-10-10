@@ -57,6 +57,17 @@ html[data-theme="dark"] {
 /* 1. Whole page */
 body {
   font: 18px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-link);
+}
+
+a:hover,
+a:focus {
+  color: color-mix(in srgb, var(--color-link) 80%, white);
 }
 
 a {
