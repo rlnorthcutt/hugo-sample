@@ -2,7 +2,26 @@
 title: "Cool hardware donation from Zerodha"
 date: 2021-11-05
 ---
+Just after the HAProxy 2.4.0 release in May this year, Kailash Nadh, CTO of [Zerodha](https://zerodha.com) contacted me and offered to donate a pair of [SolidRun HoneyComb LX2 boards](https://www.solid-run.com/arm-servers-networking-platforms/honeycomb-workstation/) to help us continue to improve out threading scalability.
 
-Just after the HAProxy 2.4.0 release in May this year, Kailash Nadh, CTO of [Zerodha](https://zerodha.com) contacted me and offered to donate a pair of [SolidRun HoneyComb LX2 boards](https://www.solid-run.com/arm-servers-networking-platforms/honeycomb-workstation/) to help us continue to improve out threading scalability. With 16 ARM cores, 32GB RAM, 64GB eMMC, 4x10GbE, and PCI-e in a tiny and quiet form factor, there definitely is plenty of potential to emphasize the cost of contention and to further improve our data model and our algorithms! As usual with SolidRun, the hardware design is really awesome (it feels like you're installing a PC, and they're about the only ones featuring the console port). However I must say I was really disappointed by their complete absence of communication during the 5 months it took to ship the board. Vishnu of Zerodha and me probably asked them for status updates 8 times in total and each time we were told "we'll contact you when it ships, no need to ask all the time". Last time we were told the parcel had been sent two weeks ago to DHL who had no way to contact me... no comment! Emailing a tracking number doesn't cost much, especially when their own tracking site still shows the order as "processing" after I received it! Hopefully SolidRun manages to address this deficiency in the future because right now they're among the very few who make affordable server-grade development boards and I hope to continue to be able to order their great products without trouble... Anyway, more news later when the tests really begin! For now the boards boot and are fast (hint: haproxy-2.5 builds in 6 sec). Many big thanks to Kailash and Vishnu of Zerodha for this very kind contribution!
+With 16 ARM cores, 32GB RAM, 64GB eMMC, 4x10GbE, and PCI-e in a tiny and quiet form factor, there definitely is plenty of potential to emphasize the cost of contention and to further improve our data model and our algorithms!
+
+As usual with SolidRun, the hardware design is really awesome (it feels like you're installing a PC, and they're about the only ones featuring the console port).
+
+However I must say I was really disappointed by their complete absence of communication during the 5 months it took to ship the board.
+
+Vishnu of Zerodha and me probably asked them for status updates 8 times in total and each time we were told "we'll contact you when it ships, no need to ask all the time".
+
+Last time we were told the parcel had been sent two weeks ago to DHL who had no way to contact me... no comment!
+
+Emailing a tracking number doesn't cost much, especially when their own tracking site still shows the order as "processing" after I received it!
+
+Hopefully SolidRun manages to address this deficiency in the future because right now they're among the very few who make affordable server-grade development boards and I hope to continue to be able to order their great products without trouble...
+
+Anyway, more news later when the tests really begin!
+
+For now the boards boot and are fast (hint: haproxy-2.5 builds in 6 sec).
+
+Many big thanks to Kailash and Vishnu of Zerodha for this very kind contribution!
 
 [![](/img/lx2-150.jpg)](/img/lx2-1k.jpg)

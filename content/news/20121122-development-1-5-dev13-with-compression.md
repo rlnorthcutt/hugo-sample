@@ -2,8 +2,21 @@
 title: "Development 1.5-dev13 with Compression!"
 date: 2012-11-22
 ---
+This is the largest development version ever issued, 295 patches in 2 months!
 
-This is the largest development version ever issued, 295 patches in 2 months! We managed to keep the [Exceliance](http://www.exceliance.fr/en/) team busy all the time, which means that the code is becoming more modular with less cross-dependences, I really like this ! First, we got an amazing amount of feedback from early adopters of dev12. It seems like SSL was expected for too long a time. We really want to thank all those who contributed patches, feedback, configs, cores (yes there were) and even live gdb access, you know who you are and you deserve a big thanks for this! Git log says there were 55 bugs fixed since dev12 (a few of them might have been introduced in between). Still, this means that dev12 should be avoided as much as possible, which is why I redirected many of you to more recent snapshots. These bugs aside, I'm proud to say that the whole team did a really great job which could be summarized like this :
+We managed to keep the [Exceliance](http://www.exceliance.fr/en/) team busy all the time, which means that the code is becoming more modular with less cross-dependences, I really like this !
+
+First, we got an amazing amount of feedback from early adopters of dev12.
+
+It seems like SSL was expected for too long a time.
+
+We really want to thank all those who contributed patches, feedback, configs, cores (yes there were) and even live gdb access, you know who you are and you deserve a big thanks for this!
+
+Git log says there were 55 bugs fixed since dev12 (a few of them might have been introduced in between).
+
+Still, this means that dev12 should be avoided as much as possible, which is why I redirected many of you to more recent snapshots.
+
+These bugs aside, I'm proud to say that the whole team did a really great job which could be summarized like this :
 
 1.  SSL:
     *   many more features ; client and server certificates supported on both sides with CA and CRL checks. Most of the information available in SSL can be used in ACLs for access control. Some information such as protocol and ciphers can be reported in the logs. These information are still not added to HTTP logs though, a lot of config work is still needed.
@@ -27,6 +40,12 @@ This is the largest development version ever issued, 295 patches in 2 months! We
     *   "cpu-map" establishes a mapping between process numbers and CPU cores. This is important when running SSL offloaders on dedicated processes because you don't want them to pollute the low-latency L7 core.
 7.  Misc : "redirect scheme" makes it easier to redirect between http and https, config error reporting was improved for "bind" and "server" lines by enumerating the list of supported options dynamically.
 
-I must say I'm much more confident in dev13 than I was with dev12 and I have already upgraded the main web site which has been upgraded every few days with recent snapshots. I've build and run it on Linux i586/x86\_64/armv5/v7, OpenBSD/amd64 and Solaris/sparc without any issue anymore.
+I must say I'm much more confident in dev13 than I was with dev12 and I have already upgraded the main web site which has been upgraded every few days with recent snapshots.
 
-To all those running SSL tests on dev12, please drop it for dev13. I don't think we introduced regressions (but that's still possible), but I know for sure that we fixed a lot! The usual [changelog](/download/1.5/src/CHANGELOG) and [source](/download/1.5/src/) are available at the usual place.
+I've build and run it on Linux i586/x86\_64/armv5/v7, OpenBSD/amd64 and Solaris/sparc without any issue anymore.
+
+To all those running SSL tests on dev12, please drop it for dev13.
+
+I don't think we introduced regressions (but that's still possible), but I know for sure that we fixed a lot!
+
+The usual [changelog](/download/1.5/src/CHANGELOG) and [source](/download/1.5/src/) are available at the usual place.

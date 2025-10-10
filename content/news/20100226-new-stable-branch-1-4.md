@@ -2,5 +2,16 @@
 title: "New stable branch 1.4 !"
 date: 2010-02-26
 ---
+After 11 months of active development and a lot of external contributions, [**version 1.4 is now released**](/download/1.4/src/).
 
-After 11 months of active development and a lot of external contributions, [**version 1.4 is now released**](/download/1.4/src/). It has been tested for the last 3 weeks by many people, and only very minor bugs were reported (and fixed), so it's now time to officially stamp it as stable. Version 1.4 brings a lot of new features, among which the long-awaited support for client-side HTTP keep-alive, the RDP protocol, and stickiness on anything, as well as many other nice usability improvements on the stats interface, checks and the CLI. It is also much more powerful than version 1.3 and will support addition of new protocols faster than before due to a better structured internal architecture. 1.3 will still be supported for some time, and the old 1.3.15.X branch is now entering a deep freeze where only critical bugs will be fixed. Please consult [the ChangeLog](/download/1.4/src/CHANGELOG) for more information about all the changes. I particularly want to thank all the persons and companies who contributed to this version by code, testing or development funding ; without their efforts and participation, we would still be far away from a release !
+It has been tested for the last 3 weeks by many people, and only very minor bugs were reported (and fixed), so it's now time to officially stamp it as stable.
+
+Version 1.4 brings a lot of new features, among which the long-awaited support for client-side HTTP keep-alive, the RDP protocol, and stickiness on anything, as well as many other nice usability improvements on the stats interface, checks and the CLI.
+
+It is also much more powerful than version 1.3 and will support addition of new protocols faster than before due to a better structured internal architecture.
+
+1.3 will still be supported for some time, and the old 1.3.15.X branch is now entering a deep freeze where only critical bugs will be fixed.
+
+Please consult [the ChangeLog](/download/1.4/src/CHANGELOG) for more information about all the changes.
+
+I particularly want to thank all the persons and companies who contributed to this version by code, testing or development funding ; without their efforts and participation, we would still be far away from a release !
